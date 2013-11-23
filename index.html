@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-class="htmlClass">
+<head>
+  <title ng-bind="pageTitle + ' | NodeGigs'"></title>
+  <meta blah></meta>
+  <link rel="stylesheet" href="assets/css/admin.css">
+
+  <!-- build:js:release source.min.js -->
+  <script src="vendor/requirejs/require.js" data-main="app/main"></script>
+  <!-- /build -->
+
+  <!-- build:remove:release -->
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- /build -->
+</head>
+
+<body ui-view></body>
+
+</html>

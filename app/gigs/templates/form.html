@@ -1,0 +1,174 @@
+<form name="gigForm" class="form-horizontal" uni-submit="saveGig()" novalidate>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <!-- ******************************
+        //// ( Company Information ) \\\
+        ****************************** -->
+
+        <div class="widget-box">
+          <div class="widget-title">
+            <span class="icon">
+              <i class="icon-building"></i>
+            </span>
+            <h5>Company Information</h5>
+          </div>
+          <div class="widget-content nopadding">
+
+            <!-- ( Company Name ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.company.$invalid}">
+              <label class="control-label" for="company">Company Name</label>
+              <div class="controls">
+                <input  ng-model="gig.company"
+                        required
+                        name="company"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+            <!-- ( Contact Name ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.contactName.$invalid}">
+              <label class="control-label" for="contactName">Contact Name</label>
+              <div class="controls">
+                <input  ng-model="gig.contactName"
+                        required
+                        name="contactName"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+            <!-- ( Contact Email ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.contactEmail.$invalid}">
+              <label class="control-label" for="contactEmail">Contact Email</label>
+              <div class="controls">
+                <input  ng-model="gig.contactEmail"
+                        required
+                        name="contactEmail"
+                        type="email"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ******************************
+        //// ( Company Location ) \\\
+        ****************************** -->
+
+        <div class="widget-box">
+          <div class="widget-title">
+            <span class="icon">
+              <i class="icon-align-justify"></i>
+            </span>
+            <h5>Company Location</h5>
+          </div>
+          <div class="widget-content nopadding">
+
+            <!-- ( City ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.city.$invalid}">
+              <label class="control-label" for="city">City</label>
+              <div class="controls">
+                <input  ng-model="gig.city"
+                        required
+                        name="city"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+            <!-- ( State ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.state.$invalid}">
+              <label class="control-label" for="state">State</label>
+              <div class="controls">
+                <input  ng-model="gig.state"
+                        required
+                        name="state"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+            <!-- ( Country ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.country.$invalid}">
+              <label class="control-label" for="country">Country</label>
+              <div class="controls">
+                <input  ng-model="gig.country"
+                        required
+                        name="country"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ******************************
+        //// ( Gig Information ) \\\
+        ****************************** -->
+
+        <div class="widget-box">
+          <div class="widget-title">
+            <span class="icon">
+              <i class="icon-align-justify"></i>
+            </span>
+            <h5>Gig Information</h5>
+          </div>
+          <div class="widget-content nopadding">
+
+            <!-- ( Job Title ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.title.$invalid}">
+              <label class="control-label" for="title">Job Title</label>
+              <div class="controls">
+                <input  ng-model="gig.title"
+                        required
+                        name="title"
+                        type="text"
+                        class="form-control input-sm" />
+              </div>
+            </div>
+
+            <!-- ( Job Description ) -->
+            <div  class="form-group"
+                  ng-class="{'has-error': gigForm.$attempted && gigForm.description.$invalid}">
+              <label class="control-label" for="desc-mce">Job Description</label>
+              <div class="controls">
+                <textarea ng-model="gig.description"
+                          ui-tinymce="tinyMCEConfig"
+                          required
+                          name="description"
+                          class="form-control input-sm tinymce" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ******************************
+        //// ( Save ) \\\
+        ****************************** -->
+
+        <div class="widget-box">
+          <div class="widget-title">
+            <span class="icon"><i class="icon-save"></i></span>
+            <h5>Create New Gig</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <div class="form-actions">
+              <button id="submit-button" type="submit" class="btn btn-primary btn-sm">Save</button> or <a class="text-danger" ng-href="#/admin/gigs">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
